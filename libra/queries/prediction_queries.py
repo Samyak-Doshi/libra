@@ -267,12 +267,17 @@ class client:
             instruction,
             preprocess=True,
             test_size=0.2,
+            min_samples_leaf,
+            max_leaf_nodes,
             drop=None):
 
         self.models['decision_tree'] = decision_tree(instruction,
                                                      dataset=self.dataset,
                                                      preprocess=True,
+                                                     min_samples_leaf,
                                                      test_size=0.2,
+                                                     min_samples_leaf,
+                                                     max_leaf_nodes,
                                                      drop=None)
 
     def tune(self, model_to_tune):
